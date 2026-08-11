@@ -11,7 +11,7 @@ RUN apt-get update && \
     echo 'ff6751840d1319172066bd188190804adc34147c5ed55b1d584223ec4bf42474  /tmp/discord.tar.gz' | sha256sum -c - && \
     mkdir -p /opt/discord && \
     tar -xzf /tmp/discord.tar.gz -C /opt/discord --strip-components=1 && \
-    ln -s /opt/discord/Discord /usr/bin/discord && \
+    ln -s /opt/discord/discord /usr/bin/discord && \
     install -Dm644 /opt/discord/discord.desktop /usr/share/applications/com.discordapp.Discord.desktop && \
     desktop-file-edit --set-key=Exec --set-value='discord %U' \
       /usr/share/applications/com.discordapp.Discord.desktop && \
