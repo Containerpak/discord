@@ -65,9 +65,9 @@ RUN apt-get update && \
 COPY --from=assemble /out/discord /opt/discord
 COPY --from=assemble /tmp/bootstrap/discord.desktop /usr/share/applications/com.discordapp.Discord.desktop
 COPY --from=assemble /tmp/bootstrap/discord.png /usr/share/icons/hicolor/256x256/apps/com.discordapp.Discord.png
+COPY discord /usr/bin/discord
 
-RUN ln -s /opt/discord/Discord /usr/bin/discord && \
-    desktop-file-edit --set-key=Exec --set-value='discord %U' \
+RUN desktop-file-edit --set-key=Exec --set-value='discord %U' \
       /usr/share/applications/com.discordapp.Discord.desktop && \
     desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord \
       /usr/share/applications/com.discordapp.Discord.desktop && \
