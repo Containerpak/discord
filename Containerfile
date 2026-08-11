@@ -11,6 +11,9 @@ RUN apt-get update && \
     echo 'ff6751840d1319172066bd188190804adc34147c5ed55b1d584223ec4bf42474  /tmp/discord.tar.gz' | sha256sum -c - && \
     mkdir -p /opt/discord && \
     tar -xzf /tmp/discord.tar.gz -C /opt/discord --strip-components=1 && \
+    sed -i -E 's/"newUpdater"[[:space:]]*:[[:space:]]*(true|false)/"newUpdater": false/' \
+      /opt/discord/resources/build_info.json && \
+    grep -q '"newUpdater": false' /opt/discord/resources/build_info.json && \
     ln -s /opt/discord/discord /usr/bin/discord && \
     install -Dm644 /opt/discord/discord.desktop /usr/share/applications/com.discordapp.Discord.desktop && \
     desktop-file-edit --set-key=Exec --set-value='discord %U' \
