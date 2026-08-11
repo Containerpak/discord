@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    ca-certificates curl libasound2t64 libayatana-appindicator3-1 libgtk-3-0 \
+    ca-certificates curl desktop-file-utils libasound2t64 libayatana-appindicator3-1 libgtk-3-0 \
     libnss3 libxss1 xdg-utils && \
     curl -fsSL https://dl.discordapp.net/apps/linux/1.0.153/discord-1.0.153.tar.gz \
       -o /tmp/discord.tar.gz && \
