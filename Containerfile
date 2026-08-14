@@ -1,4 +1,4 @@
-FROM ghcr.io/containerpak/mesa:main AS assemble
+FROM ghcr.io/containerpak/base:main AS assemble
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -52,7 +52,7 @@ RUN apt-get update && \
       /out/discord/resources/build_info.json > /tmp/build_info.json && \
     mv /tmp/build_info.json /out/discord/resources/build_info.json
 
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/gtk3:main
 
 ARG DEBIAN_FRONTEND=noninteractive
 
