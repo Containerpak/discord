@@ -5,6 +5,16 @@
   "description": "Talk, chat and hang out with communities and friends.",
   "version": "1.0.153",
   "image": "ghcr.io/containerpak/discord:main",
+  "runtime_sources": [
+    {
+      "name": "discord-1.0.153.deb",
+      "url": "https://dl.discordapp.net/apps/linux/1.0.153/discord-1.0.153.deb",
+      "sha256": "c3f05c71ba97a258d45f870b2e9a9067ea077681fcd43e64dac3d992dea4ecff",
+      "size": 2178788,
+      "installer": "deb-extract",
+      "architecture": "amd64"
+    }
+  ],
   "binaries": ["/usr/bin/discord"],
   "desktop_entries": ["/usr/share/applications/com.discordapp.Discord.desktop"],
   "dependencies": [],

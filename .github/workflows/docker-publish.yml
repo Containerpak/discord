@@ -49,8 +49,8 @@ jobs:
           cache-to: type=gha,mode=max
           provenance: mode=max
           sbom: true
-      - name: Verify exports
-        run: docker run --rm ghcr.io/containerpak/discord:main sh -c 'test -x /usr/bin/discord && test -f /usr/share/applications/com.discordapp.Discord.desktop'
+      - name: Verify adapter
+        run: docker run --rm ghcr.io/containerpak/discord:main sh -c 'test -L /usr/share/applications/com.discordapp.Discord.desktop && test ! -e /usr/bin/discord && test ! -e /usr/share/discord/discord.desktop'
 
       - uses: sigstore/cosign-installer@d7543c93d881b35a8faa02e8e3605f69b7a1ce62
 
