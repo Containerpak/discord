@@ -3,13 +3,13 @@
   "manifest_version": "2.0",
   "name": "Discord",
   "description": "Talk, chat and hang out with communities and friends.",
-  "version": "1.0.153",
+  "version": "1.0.154",
   "image": "ghcr.io/containerpak/discord:main",
   "runtime_sources": [
     {
-      "name": "discord-1.0.153.deb",
-      "url": "https://dl.discordapp.net/apps/linux/1.0.153/discord-1.0.153.deb",
-      "sha256": "c3f05c71ba97a258d45f870b2e9a9067ea077681fcd43e64dac3d992dea4ecff",
+      "name": "discord-1.0.154.deb",
+      "url": "https://stable.dl2.discordapp.net/apps/linux/1.0.154/discord-1.0.154.deb",
+      "sha256": "ba1aef3fdcfe9f102685eedeff7d7e357a1e6eefd2ed5bdce77cdbda31810428",
       "size": 2178788,
       "installer": "deb-extract",
       "architecture": "amd64"
