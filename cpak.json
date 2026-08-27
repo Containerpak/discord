@@ -1,10 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Discord",
   "description": "Talk, chat and hang out with communities and friends.",
   "version": "1.0.155",
-  "image": "ghcr.io/containerpak/discord:main",
+  "image": "ghcr.io/containerpak/discord@sha256:6f3cc8ce9a89f6c4ef738e619e69ca422a47cab270dcbd07263adc9fc80dac4a",
   "runtime_sources": [
     {
       "name": "discord-1.0.155.deb",
@@ -15,22 +15,21 @@
       "architecture": "amd64"
     }
   ],
-  "binaries": ["/usr/bin/discord"],
-  "desktop_entries": ["/usr/share/applications/com.discordapp.Discord.desktop"],
+  "binaries": [
+    "/usr/bin/discord"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/com.discordapp.Discord.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": false,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": true,
@@ -42,7 +41,12 @@
     "deviceAll": false,
     "notification": true,
     "openURI": true,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -50,7 +54,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": ["xdg-open"]
+    "asRoot": false
   }
 }
