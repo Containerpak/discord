@@ -4,7 +4,7 @@
   "name": "Discord",
   "description": "Talk, chat and hang out with communities and friends.",
   "version": "1.0.157",
-  "image": "ghcr.io/containerpak/discord@sha256:95ad684342bc7020b8ed8d98ae0abac489c5c523b36b609ff635dd8503eaafc4",
+  "image": "ghcr.io/containerpak/discord@sha256:36f58a454601c733bbb8ae691a501ce14ebda5e8cc33434c971802684bb7196a",
   "runtime_sources": [
     {
       "name": "discord-1.0.157.deb",
